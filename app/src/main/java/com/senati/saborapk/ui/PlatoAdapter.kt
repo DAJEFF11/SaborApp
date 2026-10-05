@@ -10,7 +10,9 @@ import com.senati.saborapk.R
 import com.senati.saborapk.data.model.Plato
 import com.senati.saborapk.databinding.ItemPlatoBinding
 
-class PlatoAdapter : ListAdapter<Plato, PlatoAdapter.PlatoViewHolder>(DiffCallback) {
+class PlatoAdapter(
+    private val onPlatoClick: (Plato) -> Unit
+) : ListAdapter<Plato, PlatoAdapter.PlatoViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlatoViewHolder {
         val binding = ItemPlatoBinding.inflate(
@@ -18,7 +20,7 @@ class PlatoAdapter : ListAdapter<Plato, PlatoAdapter.PlatoViewHolder>(DiffCallba
             parent,
             false
         )
-        return PlatoViewHolder(binding)
+        return PlatoViewHolder(binding, onPlatoClick)
     }
 
     override fun onBindViewHolder(holder: PlatoViewHolder, position: Int) {
@@ -26,7 +28,8 @@ class PlatoAdapter : ListAdapter<Plato, PlatoAdapter.PlatoViewHolder>(DiffCallba
     }
 
     class PlatoViewHolder(
-        private val binding: ItemPlatoBinding
+        private val binding: ItemPlatoBinding,
+        private val onPlatoClick: (Plato) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(plato: Plato) = with(binding) {
@@ -41,6 +44,7 @@ class PlatoAdapter : ListAdapter<Plato, PlatoAdapter.PlatoViewHolder>(DiffCallba
             )
             val textColor = if (plato.disponible) R.color.text_secondary else R.color.accent_red
             tvDisponibilidad.setTextColor(ContextCompat.getColor(root.context, textColor))
+            root.setOnClickListener { onPlatoClick(plato) }
         }
     }
 

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaborApk">
         <activity
+            android:name=".CuentaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MesaFormActivity"
             android:exported="false" />
         <activity

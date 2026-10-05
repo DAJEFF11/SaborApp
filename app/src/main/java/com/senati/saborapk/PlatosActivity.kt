@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.senati.saborapk.data.PlatoDao
 import com.senati.saborapk.databinding.ActivityPlatosBinding
@@ -13,7 +14,12 @@ class PlatosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPlatosBinding
     private lateinit var platoDao: PlatoDao
-    private val platoAdapter = PlatoAdapter()
+    private val platoAdapter = PlatoAdapter { plato ->
+        startActivity(
+            Intent(this, PlatoFormActivity::class.java)
+                .putExtra(PlatoFormActivity.EXTRA_PLATO_ID, plato.id)
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,15 +36,18 @@ class PlatosActivity : AppCompatActivity() {
         binding.fabAgregarPlato.setOnClickListener {
             startActivity(Intent(this, PlatoFormActivity::class.java))
         }
+        binding.etBuscarPlato.doAfterTextChanged {
+            cargarPlatos(it?.toString().orEmpty())
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        cargarPlatos()
+        cargarPlatos(binding.etBuscarPlato.text?.toString().orEmpty())
     }
 
-    private fun cargarPlatos() {
-        val platos = platoDao.listar()
+    private fun cargarPlatos(filtro: String) {
+        val platos = platoDao.listar(filtro)
         platoAdapter.submitList(platos)
         binding.tvPlatosVacio.visibility = if (platos.isEmpty()) View.VISIBLE else View.GONE
     }

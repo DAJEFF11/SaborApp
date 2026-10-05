@@ -31,12 +31,13 @@
     <string name="badge_pedidos">P</string>
     <string name="badge_reportes">R</string>
     <string name="pantalla_lista">Pantalla lista</string>
-    <string name="mensaje_pedidos_vacio">La toma de pedidos por mesa se habilitará en el Sprint 3.</string>
     <string name="mensaje_reportes_vacio">Los indicadores de ventas se habilitarán en el Sprint 4.</string>
 
     <string name="agregar_plato">Agregar plato</string>
     <string name="lista_platos_vacia">Aún no hay platos registrados.\nPulsa + para agregar el primero.</string>
+    <string name="buscar_plato">Buscar plato</string>
     <string name="registrar_plato">Registrar plato</string>
+    <string name="editar_plato">Editar plato</string>
     <string name="nombre_plato">Nombre</string>
     <string name="categoria_plato">Categoría</string>
     <string name="precio_plato">Precio (S/)</string>
@@ -46,6 +47,16 @@
     <string name="error_precio_requerido">Ingresa el precio</string>
     <string name="error_precio_invalido">Precio inválido</string>
     <string name="plato_registrado">Plato registrado</string>
+    <string name="plato_actualizado">Plato actualizado</string>
+    <string name="plato_eliminado">Plato eliminado</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar_plato">Eliminar plato</string>
+    <string name="confirmar_eliminar_plato">¿Seguro que deseas eliminar este plato?</string>
+    <string name="error_plato_no_encontrado">El plato ya no existe</string>
+    <string name="error_plato_con_pedidos">No se puede eliminar: tiene pedidos</string>
+    <string name="error_eliminar_plato">No se pudo eliminar el plato</string>
     <string name="error_guardar_plato">No se pudo guardar el plato</string>
     <string name="detalle_plato">%1$s · S/ %2$.2f</string>
     <string name="disponible">Disponible</string>
@@ -67,6 +78,35 @@
         <item quantity="one">%1$d persona</item>
         <item quantity="other">%1$d personas</item>
     </plurals>
+
+    <string name="selecciona_mesa">Selecciona una mesa</string>
+    <string name="sin_mesas_pedido">Registra mesas antes de tomar un pedido.</string>
+    <string name="libre">Libre</string>
+    <string name="ocupada">Ocupada</string>
+    <string name="mesa_pedido_nuevo">Mesa %1$d · nuevo pedido</string>
+    <string name="mesa_pedido_abierto">Mesa %1$d · pedido abierto</string>
+    <string name="plato">Plato</string>
+    <string name="plato_spinner">%1$s · S/ %2$.2f</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="cantidad_inicial">1</string>
+    <string name="agregar">Agregar</string>
+    <string name="pedido_sin_detalles">Agrega el primer plato para abrir el pedido.</string>
+    <string name="total">Total</string>
+    <string name="ver_cuenta">Ver cuenta</string>
+    <string name="sin_platos_disponibles">No hay platos disponibles</string>
+    <string name="error_cantidad_invalida">Cantidad inválida</string>
+    <string name="plato_agregado_pedido">Plato agregado al pedido</string>
+    <string name="error_guardar_pedido">No se pudo guardar el pedido</string>
+    <string name="cantidad_nombre_plato">%1$d x %2$s</string>
+    <string name="moneda">S/ %1$.2f</string>
+
+    <string name="cuenta_mesa">Cuenta · Mesa %1$d</string>
+    <string name="datos_pedido">Pedido #%1$d · %2$s</string>
+    <string name="cerrar_cuenta">Cerrar cuenta</string>
+    <string name="confirmar_cerrar_cuenta">¿Confirmas el cobro y la liberación de la mesa?</string>
+    <string name="mesa_liberada">Cuenta cerrada y mesa liberada</string>
+    <string name="error_cerrar_cuenta">La cuenta ya está cerrada o no tiene consumos</string>
+    <string name="error_pedido_no_encontrado">El pedido ya no existe</string>
 
     <string-array name="categorias_plato">
         <item>Entradas</item>

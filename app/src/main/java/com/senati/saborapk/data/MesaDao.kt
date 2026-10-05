@@ -40,5 +40,6 @@ class MesaDao(context: Context) {
 
     companion object {
         const val ESTADO_LIBRE = "LIBRE"
+        const val ESTADO_OCUPADA = "OCUPADA"
     }
 }
