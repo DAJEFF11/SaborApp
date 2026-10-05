@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SaborApp</string>
+    <string name="nombre_negocio">Pollería El Buen Sabor</string>
+    <string name="logo_letter">S</string>
+    <string name="usuario">Usuario</string>
+    <string name="clave">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="credenciales_prueba">Prueba: admin / 1234</string>
+    <string name="error_usuario_requerido">Ingresa tu usuario</string>
+    <string name="error_clave_requerida">Ingresa tu contraseña</string>
+    <string name="error_credenciales">Credenciales incorrectas</string>
+    <string name="saludo_usuario">Hola, %1$s</string>
+    <string name="rol_usuario">Rol: %1$s</string>
+    <string name="usuario_generico">Usuario</string>
+    <string name="avatar_default">U</string>
+    <string name="opcion_platos">Platos</string>
+    <string name="opcion_mesas">Mesas</string>
+    <string name="opcion_pedidos">Pedidos</string>
+    <string name="opcion_reportes">Reportes</string>
+    <string name="salir">Salir</string>
+    <string name="flecha_siguiente">›</string>
+    <string name="volver">Volver</string>
+    <string name="titulo_platos">Lista de platos</string>
+    <string name="titulo_mesas">Mesas</string>
+    <string name="titulo_pedidos">Pedidos</string>
+    <string name="titulo_reportes">Reportes</string>
+    <string name="badge_platos">P</string>
+    <string name="badge_mesas">M</string>
+    <string name="badge_pedidos">P</string>
+    <string name="badge_reportes">R</string>
+    <string name="pantalla_lista">Pantalla lista</string>
+    <string name="mensaje_platos_vacio">Aquí aparecerán los platos registrados en el Sprint 2.</string>
+    <string name="mensaje_mesas_vacio">Aquí aparecerán las mesas registradas en el Sprint 2.</string>
+    <string name="mensaje_pedidos_vacio">La toma de pedidos por mesa se habilitará en el Sprint 3.</string>
+    <string name="mensaje_reportes_vacio">Los indicadores de ventas se habilitarán en el Sprint 4.</string>
+</resources>
