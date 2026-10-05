@@ -5,6 +5,7 @@
     <color name="primary_light">#FFF0EA</color>
     <color name="accent_red">#D9342B</color>
     <color name="surface">#FFFDFC</color>
+    <color name="surface_variant">#F3F0EE</color>
     <color name="outline">#DDD8D5</color>
     <color name="text_primary">#24201E</color>
     <color name="text_secondary">#756F6B</color>

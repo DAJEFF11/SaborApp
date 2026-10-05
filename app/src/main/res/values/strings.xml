@@ -5,12 +5,14 @@
     <string name="usuario">Usuario</string>
     <string name="clave">Contraseña</string>
     <string name="ingresar">Ingresar</string>
-    <string name="credenciales_prueba">Prueba: admin / 1234</string>
+    <string name="credenciales_prueba">Prueba: admin / 1234 · mozo / 1234</string>
     <string name="error_usuario_requerido">Ingresa tu usuario</string>
     <string name="error_clave_requerida">Ingresa tu contraseña</string>
     <string name="error_credenciales">Credenciales incorrectas</string>
     <string name="saludo_usuario">Hola, %1$s</string>
     <string name="rol_usuario">Rol: %1$s</string>
+    <string name="rol_administrador">Administrador</string>
+    <string name="rol_mozo">Mozo</string>
     <string name="usuario_generico">Usuario</string>
     <string name="avatar_default">U</string>
     <string name="opcion_platos">Platos</string>
@@ -29,8 +31,47 @@
     <string name="badge_pedidos">P</string>
     <string name="badge_reportes">R</string>
     <string name="pantalla_lista">Pantalla lista</string>
-    <string name="mensaje_platos_vacio">Aquí aparecerán los platos registrados en el Sprint 2.</string>
-    <string name="mensaje_mesas_vacio">Aquí aparecerán las mesas registradas en el Sprint 2.</string>
     <string name="mensaje_pedidos_vacio">La toma de pedidos por mesa se habilitará en el Sprint 3.</string>
     <string name="mensaje_reportes_vacio">Los indicadores de ventas se habilitarán en el Sprint 4.</string>
+
+    <string name="agregar_plato">Agregar plato</string>
+    <string name="lista_platos_vacia">Aún no hay platos registrados.\nPulsa + para agregar el primero.</string>
+    <string name="registrar_plato">Registrar plato</string>
+    <string name="nombre_plato">Nombre</string>
+    <string name="categoria_plato">Categoría</string>
+    <string name="precio_plato">Precio (S/)</string>
+    <string name="disponibilidad_plato">Disponible para pedidos</string>
+    <string name="guardar">Guardar</string>
+    <string name="error_nombre_requerido">Ingresa el nombre</string>
+    <string name="error_precio_requerido">Ingresa el precio</string>
+    <string name="error_precio_invalido">Precio inválido</string>
+    <string name="plato_registrado">Plato registrado</string>
+    <string name="error_guardar_plato">No se pudo guardar el plato</string>
+    <string name="detalle_plato">%1$s · S/ %2$.2f</string>
+    <string name="disponible">Disponible</string>
+    <string name="agotado">Agotado</string>
+
+    <string name="agregar_mesa">Agregar mesa</string>
+    <string name="lista_mesas_vacia">Aún no hay mesas registradas.\nPulsa + para agregar la primera.</string>
+    <string name="registrar_mesa">Registrar mesa</string>
+    <string name="numero">Número</string>
+    <string name="capacidad">Capacidad</string>
+    <string name="ayuda_capacidad">Entre 1 y 12 personas</string>
+    <string name="error_numero_mesa">Número de mesa inválido</string>
+    <string name="error_capacidad_invalida">Capacidad inválida</string>
+    <string name="error_mesa_duplicada">La mesa ya existe</string>
+    <string name="mesa_registrada">Mesa registrada</string>
+    <string name="error_guardar_mesa">No se pudo guardar la mesa</string>
+    <string name="numero_mesa">Mesa %1$d</string>
+    <plurals name="capacidad_mesa">
+        <item quantity="one">%1$d persona</item>
+        <item quantity="other">%1$d personas</item>
+    </plurals>
+
+    <string-array name="categorias_plato">
+        <item>Entradas</item>
+        <item>Fondos</item>
+        <item>Bebidas</item>
+        <item>Postres</item>
+    </string-array>
 </resources>

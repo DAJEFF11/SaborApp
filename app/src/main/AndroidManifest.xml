@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaborApk">
         <activity
+            android:name=".MesaFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlatoFormActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReportesActivity"
             android:exported="false" />
         <activity

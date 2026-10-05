@@ -19,7 +19,10 @@ class MenuActivity : AppCompatActivity() {
         val rol = intent.getStringExtra(EXTRA_ROL) ?: ROL_MOZO
 
         binding.tvSaludo.text = getString(R.string.saludo_usuario, nombre)
-        binding.tvRol.text = getString(R.string.rol_usuario, rol.lowercase().replaceFirstChar { it.uppercase() })
+        val rolVisible = getString(
+            if (rol == ROL_ADMIN) R.string.rol_administrador else R.string.rol_mozo
+        )
+        binding.tvRol.text = getString(R.string.rol_usuario, rolVisible)
         binding.tvAvatar.text = nombre.firstOrNull()?.uppercase() ?: getString(R.string.avatar_default)
         binding.cardReportes.visibility = if (rol == ROL_ADMIN) View.VISIBLE else View.GONE
 

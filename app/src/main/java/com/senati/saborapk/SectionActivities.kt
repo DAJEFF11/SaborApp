@@ -28,18 +28,6 @@ abstract class SectionActivity : AppCompatActivity() {
     }
 }
 
-class PlatosActivity : SectionActivity() {
-    override val titleRes = R.string.titulo_platos
-    override val badgeRes = R.string.badge_platos
-    override val messageRes = R.string.mensaje_platos_vacio
-}
-
-class MesasActivity : SectionActivity() {
-    override val titleRes = R.string.titulo_mesas
-    override val badgeRes = R.string.badge_mesas
-    override val messageRes = R.string.mensaje_mesas_vacio
-}
-
 class PedidoActivity : SectionActivity() {
     override val titleRes = R.string.titulo_pedidos
     override val badgeRes = R.string.badge_pedidos

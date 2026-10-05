@@ -2,20 +2,32 @@ package com.senati.saborapk
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.senati.saborapk.data.UsuarioDao
 import com.senati.saborapk.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var usuarioDao: UsuarioDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        usuarioDao = UsuarioDao(this)
 
         binding.btnIngresar.setOnClickListener { validarIngreso() }
+        binding.etClave.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                validarIngreso()
+                true
+            } else {
+                false
+            }
+        }
     }
 
     private fun validarIngreso() {
@@ -35,10 +47,11 @@ class LoginActivity : AppCompatActivity() {
 
         if (usuario.isBlank() || clave.isBlank()) return
 
-        if (usuario == USUARIO_DEMO && clave == CLAVE_DEMO) {
+        val usuarioValidado = usuarioDao.validarUsuario(usuario, clave)
+        if (usuarioValidado != null) {
             val intent = Intent(this, MenuActivity::class.java).apply {
-                putExtra(MenuActivity.EXTRA_NOMBRE, usuario)
-                putExtra(MenuActivity.EXTRA_ROL, ROL_ADMIN)
+                putExtra(MenuActivity.EXTRA_NOMBRE, usuarioValidado.usuario)
+                putExtra(MenuActivity.EXTRA_ROL, usuarioValidado.rol)
             }
             startActivity(intent)
             finish()
@@ -47,9 +60,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        private const val USUARIO_DEMO = "admin"
-        private const val CLAVE_DEMO = "1234"
-        private const val ROL_ADMIN = "ADMIN"
-    }
 }
