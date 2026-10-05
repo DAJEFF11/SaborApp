@@ -6,18 +6,29 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.senati.saborapk.data.UsuarioDao
+import com.senati.saborapk.data.SessionManager
 import com.senati.saborapk.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var usuarioDao: UsuarioDao
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         usuarioDao = UsuarioDao(this)
+        sessionManager = SessionManager(this)
+
+        if (sessionManager.sesionActiva) {
+            abrirMenu(
+                sessionManager.nombreUsuario ?: getString(R.string.usuario_generico),
+                sessionManager.rol ?: ROL_MOZO
+            )
+            return
+        }
 
         binding.btnIngresar.setOnClickListener { validarIngreso() }
         binding.etClave.setOnEditorActionListener { _, actionId, _ ->
@@ -49,15 +60,24 @@ class LoginActivity : AppCompatActivity() {
 
         val usuarioValidado = usuarioDao.validarUsuario(usuario, clave)
         if (usuarioValidado != null) {
-            val intent = Intent(this, MenuActivity::class.java).apply {
-                putExtra(MenuActivity.EXTRA_NOMBRE, usuarioValidado.usuario)
-                putExtra(MenuActivity.EXTRA_ROL, usuarioValidado.rol)
-            }
-            startActivity(intent)
-            finish()
+            sessionManager.guardar(usuarioValidado)
+            abrirMenu(usuarioValidado.usuario, usuarioValidado.rol)
         } else {
             Toast.makeText(this, R.string.error_credenciales, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun abrirMenu(nombre: String, rol: String) {
+        val intent = Intent(this, MenuActivity::class.java).apply {
+            putExtra(MenuActivity.EXTRA_NOMBRE, nombre)
+            putExtra(MenuActivity.EXTRA_ROL, rol)
+        }
+        startActivity(intent)
+        finish()
+    }
+
+    companion object {
+        private const val ROL_MOZO = "MOZO"
     }
 
 }

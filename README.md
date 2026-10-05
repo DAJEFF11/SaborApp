@@ -7,9 +7,9 @@ Aplicación Android nativa para la Pollería El Buen Sabor, desarrollada con Kot
 - Sprint 1: login, menú principal, navegación e identidad visual. ✅
 - Sprint 2: SQLite, usuarios, platos y mesas. ✅
 - Sprint 3: CRUD y pedidos por mesa. ✅
-- Sprint 4: reportes, sesión, compartir cuenta y APK final.
+- Sprint 4: reportes, sesión, compartir cuenta y APK final. ✅
 
-La rama `Sprint-3` contiene la tercera entrega y conserva todo lo realizado en los sprints anteriores.
+La rama `Sprint-4` contiene la entrega final y conserva todo lo realizado en los sprints anteriores.
 
 ## Credenciales temporales
 
@@ -36,6 +36,15 @@ Las credenciales se validan contra la base de datos local `saborapp.db`.
 - Diferenciación visual entre mesas libres y ocupadas.
 - Cuenta detallada y cierre transaccional que libera la mesa.
 
+## Sprint 4
+
+- Reporte diario de ventas, cantidad de pedidos y ticket promedio.
+- Ranking de los cinco platos más vendidos y ventas agrupadas por mesa.
+- Estado vacío cuando todavía no existen ventas cerradas en el día.
+- Cuenta y resumen de ventas compartibles mediante cualquier aplicación compatible.
+- Sesión persistente con cierre de sesión seguro.
+- APK release firmado compatible desde Android 7.0 (API 24).
+
 ## Requisitos
 
 - Android Studio
@@ -51,3 +60,8 @@ En Windows:
 ```
 
 El APK de depuración se genera en `app/build/outputs/apk/debug/`.
+
+Para una entrega final ya compilada, consulta `releases/SaborApp-v1.0.apk`.
+
+La compilación local de una nueva versión release requiere un archivo ignorado
+`keystore.properties` y su almacén de claves. Esos secretos no se publican en Git.

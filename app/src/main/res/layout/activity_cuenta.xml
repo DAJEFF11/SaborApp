@@ -66,6 +66,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/cerrar_cuenta" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCompartirCuenta"
+        style="@style/Widget.SaborApp.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/compartir_cuenta" />
 </LinearLayout>

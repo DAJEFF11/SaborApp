@@ -30,8 +30,6 @@
     <string name="badge_mesas">M</string>
     <string name="badge_pedidos">P</string>
     <string name="badge_reportes">R</string>
-    <string name="pantalla_lista">Pantalla lista</string>
-    <string name="mensaje_reportes_vacio">Los indicadores de ventas se habilitarán en el Sprint 4.</string>
 
     <string name="agregar_plato">Agregar plato</string>
     <string name="lista_platos_vacia">Aún no hay platos registrados.\nPulsa + para agregar el primero.</string>
@@ -107,6 +105,25 @@
     <string name="mesa_liberada">Cuenta cerrada y mesa liberada</string>
     <string name="error_cerrar_cuenta">La cuenta ya está cerrada o no tiene consumos</string>
     <string name="error_pedido_no_encontrado">El pedido ya no existe</string>
+    <string name="compartir_cuenta">Compartir cuenta</string>
+    <string name="cuenta_saborapp">Cuenta · SaborApp</string>
+    <string name="linea_cuenta">%1$d x %2$s — %3$s</string>
+    <string name="total_cuenta_compartida">Total: %1$s</string>
+    <string name="sin_apps_compartir">No hay aplicaciones disponibles para compartir</string>
+
+    <string name="sin_ventas_hoy">Sin ventas hoy</string>
+    <string name="venta_hoy">Venta de hoy</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="ticket_promedio">Ticket promedio</string>
+    <string name="platos_mas_pedidos">Platos más pedidos</string>
+    <string name="venta_por_mesa">Venta por mesa</string>
+    <string name="cantidad_vendida">%1$d</string>
+    <string name="numero_entero">%1$d</string>
+    <string name="compartir_resumen">Compartir resumen</string>
+    <string name="resumen_saborapp">Resumen de ventas · SaborApp</string>
+    <string name="resumen_venta">Venta del día: %1$s</string>
+    <string name="resumen_pedidos">Pedidos cerrados: %1$d</string>
+    <string name="resumen_ticket">Ticket promedio: %1$s</string>
 
     <string-array name="categorias_plato">
         <item>Entradas</item>
