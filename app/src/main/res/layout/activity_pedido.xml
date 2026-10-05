@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_header_gradient"
         app:navigationContentDescription="@string/volver"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:title="@string/titulo_pedidos"
@@ -20,17 +20,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:text="@string/selecciona_mesa"
         android:textColor="@color/text_primary"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="172dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMesasPedido"
@@ -53,28 +53,29 @@
         android:id="@+id/cardPedido"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
         android:layout_weight="1"
         android:visibility="gone"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="12dp"
-        app:strokeColor="@color/outline"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/outline_soft"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="14dp">
+            android:padding="18dp">
 
             <TextView
                 android:id="@+id/tvMesaSeleccionada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_primary"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -101,7 +102,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilCantidadPedido"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                    style="@style/Widget.SaborApp.Input"
                     android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/cantidad">

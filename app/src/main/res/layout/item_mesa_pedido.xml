@@ -8,18 +8,25 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="16dp"
     app:cardElevation="1dp"
-    app:strokeColor="@color/outline"
+    app:strokeColor="@color/outline_soft"
     app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:minHeight="76dp"
+        android:minHeight="86dp"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/icono_decorativo"
+            android:src="@drawable/ic_table" />
 
         <TextView
             android:id="@+id/tvNumeroMesa"
@@ -34,6 +41,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
+            android:background="@drawable/bg_status_badge"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
             android:textColor="@color/text_secondary"
             android:textSize="12sp" />
     </LinearLayout>

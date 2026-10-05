@@ -47,6 +47,13 @@ class MesaPedidoAdapter(
             tvEstadoMesa.text = root.context.getString(
                 if (mesa.estado == MesaDao.ESTADO_OCUPADA) R.string.ocupada else R.string.libre
             )
+            val ocupada = mesa.estado == MesaDao.ESTADO_OCUPADA
+            tvEstadoMesa.setTextColor(
+                ContextCompat.getColor(root.context, if (ocupada) R.color.accent_red else R.color.success)
+            )
+            tvEstadoMesa.setBackgroundResource(
+                if (ocupada) R.drawable.bg_badge_danger else R.drawable.bg_badge_success
+            )
             val fondo = if (mesa.estado == MesaDao.ESTADO_OCUPADA) {
                 R.color.primary_light
             } else {

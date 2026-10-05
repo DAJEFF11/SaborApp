@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#E63D0B</color>
-    <color name="primary_dark">#B92D06</color>
-    <color name="primary_light">#FFF0EA</color>
-    <color name="accent_red">#D9342B</color>
-    <color name="surface">#FFFDFC</color>
-    <color name="surface_variant">#F3F0EE</color>
-    <color name="outline">#DDD8D5</color>
-    <color name="text_primary">#24201E</color>
-    <color name="text_secondary">#756F6B</color>
+    <color name="primary">#E54817</color>
+    <color name="primary_dark">#A92D0C</color>
+    <color name="primary_deep">#7B210B</color>
+    <color name="primary_soft">#FF7545</color>
+    <color name="primary_light">#FFF0E9</color>
+    <color name="accent_red">#D93838</color>
+    <color name="surface">#FFFCFA</color>
+    <color name="page_background">#F7F5F2</color>
+    <color name="surface_variant">#F0ECE8</color>
+    <color name="outline">#E5DDD7</color>
+    <color name="outline_soft">#F0E9E4</color>
+    <color name="text_primary">#241D1A</color>
+    <color name="text_secondary">#746A64</color>
+    <color name="text_muted">#9A8F88</color>
+    <color name="success">#2E8B62</color>
+    <color name="success_light">#E8F6EF</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_72">#B8FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

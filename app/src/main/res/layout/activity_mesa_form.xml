@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_header_gradient"
         app:navigationContentDescription="@string/volver"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:title="@string/registrar_mesa"
@@ -24,7 +24,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilNumeroMesa"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/Widget.SaborApp.Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/numero">
@@ -39,7 +39,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCapacidadMesa"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/Widget.SaborApp.Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"

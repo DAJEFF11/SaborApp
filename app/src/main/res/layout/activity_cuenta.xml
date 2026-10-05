@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_header_gradient"
         app:navigationContentDescription="@string/volver"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:titleTextColor="@color/white" />
@@ -19,10 +19,12 @@
         android:id="@+id/tvDatosPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingTop="14dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_status_badge"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/text_secondary"
         android:textSize="13sp" />
 
@@ -30,7 +32,9 @@
         android:id="@+id/rvDetalleCuenta"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1" />
 
     <LinearLayout
@@ -38,8 +42,11 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_total_panel"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="16dp">
 
         <TextView
             android:layout_width="0dp"
@@ -67,7 +74,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/cerrar_cuenta" />
+        android:text="@string/cerrar_cuenta"
+        app:icon="@drawable/ic_receipt"
+        app:iconTint="@color/white" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCompartirCuenta"
@@ -77,5 +86,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/compartir_cuenta" />
+        android:text="@string/compartir_cuenta"
+        app:icon="@drawable/ic_share"
+        app:iconTint="@color/primary" />
 </LinearLayout>

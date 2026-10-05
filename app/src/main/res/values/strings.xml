@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">SaborApp</string>
     <string name="nombre_negocio">Pollería El Buen Sabor</string>
+    <string name="bienvenido">Bienvenido de vuelta</string>
+    <string name="bienvenido_subtitulo">Gestiona tu negocio de forma simple y rápida</string>
+    <string name="acceso_seguro">ACCESO SEGURO</string>
     <string name="logo_letter">S</string>
     <string name="usuario">Usuario</string>
     <string name="clave">Contraseña</string>
@@ -20,16 +23,18 @@
     <string name="opcion_pedidos">Pedidos</string>
     <string name="opcion_reportes">Reportes</string>
     <string name="salir">Salir</string>
+    <string name="panel_control">Panel de control</string>
+    <string name="descripcion_platos">Carta, precios y disponibilidad</string>
+    <string name="descripcion_mesas">Capacidad y estado del salón</string>
+    <string name="descripcion_pedidos">Toma pedidos y controla cuentas</string>
+    <string name="descripcion_reportes">Ventas e indicadores del día</string>
     <string name="flecha_siguiente">›</string>
     <string name="volver">Volver</string>
+    <string name="icono_decorativo">Icono decorativo</string>
     <string name="titulo_platos">Lista de platos</string>
     <string name="titulo_mesas">Mesas</string>
     <string name="titulo_pedidos">Pedidos</string>
     <string name="titulo_reportes">Reportes</string>
-    <string name="badge_platos">P</string>
-    <string name="badge_mesas">M</string>
-    <string name="badge_pedidos">P</string>
-    <string name="badge_reportes">R</string>
 
     <string name="agregar_plato">Agregar plato</string>
     <string name="lista_platos_vacia">Aún no hay platos registrados.\nPulsa + para agregar el primero.</string>

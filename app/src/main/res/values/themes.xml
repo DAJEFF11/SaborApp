@@ -8,10 +8,15 @@
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
         <item name="colorOutline">@color/outline</item>
-        <item name="android:fontFamily">sans</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowBackground">@color/page_background</item>
+        <item name="android:colorAccent">@color/primary</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">@color/primary_dark</item>
-        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:statusBarColor">@color/primary_deep</item>
+        <item name="android:navigationBarColor">@color/page_background</item>
+        <item name="materialCardViewStyle">@style/Widget.SaborApp.ContentCard</item>
+        <item name="materialButtonStyle">@style/Widget.SaborApp.PrimaryButton</item>
+        <item name="toolbarStyle">@style/Widget.SaborApp.Toolbar</item>
     </style>
 
     <style name="Theme.SaborApk" parent="Base.Theme.SaborApk" />

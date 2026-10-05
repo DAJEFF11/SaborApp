@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_header_gradient"
         app:navigationContentDescription="@string/volver"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:title="@string/registrar_plato"
@@ -30,7 +30,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombrePlato"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/Widget.SaborApp.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/nombre_plato">
@@ -62,7 +62,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPrecioPlato"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/Widget.SaborApp.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
@@ -81,6 +81,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/bg_status_badge"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp"
                 android:checked="true"
                 android:text="@string/disponibilidad_plato"
                 android:textColor="@color/text_primary" />

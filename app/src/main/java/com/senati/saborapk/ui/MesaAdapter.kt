@@ -2,10 +2,12 @@ package com.senati.saborapk.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.senati.saborapk.R
+import com.senati.saborapk.data.MesaDao
 import com.senati.saborapk.data.model.Mesa
 import com.senati.saborapk.databinding.ItemMesaBinding
 
@@ -32,6 +34,13 @@ class MesaAdapter : ListAdapter<Mesa, MesaAdapter.MesaViewHolder>(DiffCallback) 
                 mesa.capacidad
             )
             tvEstadoMesa.text = mesa.estado
+            val libre = mesa.estado == MesaDao.ESTADO_LIBRE
+            tvEstadoMesa.setTextColor(
+                ContextCompat.getColor(root.context, if (libre) R.color.success else R.color.accent_red)
+            )
+            tvEstadoMesa.setBackgroundResource(
+                if (libre) R.drawable.bg_badge_success else R.drawable.bg_badge_danger
+            )
         }
     }
 

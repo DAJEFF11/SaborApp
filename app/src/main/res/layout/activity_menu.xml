@@ -10,30 +10,45 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/primary"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_header_gradient"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="20dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="18dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/nombre_negocio"
+                android:textColor="@color/white_72"
+                android:textSize="12sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvAvatar"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:background="@drawable/bg_avatar"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             tools:text="A" />
     </LinearLayout>
@@ -48,14 +63,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingStart="18dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/panel_control"
+                android:textAllCaps="true"
+                android:textColor="@color/primary"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvSaludo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_primary"
-                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 tools:text="Hola, admin" />
 
@@ -63,7 +92,8 @@
                 android:id="@+id/tvRol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="18dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="22dp"
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp"
                 tools:text="Rol: Administrador" />
@@ -78,36 +108,48 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="82dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="14dp">
+                    android:paddingHorizontal="16dp">
 
-                    <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
                         android:background="@drawable/bg_menu_icon"
-                        android:gravity="center"
-                        android:text="@string/badge_platos"
-                        android:textColor="@color/primary"
-                        android:textStyle="bold" />
+                        android:contentDescription="@string/opcion_platos"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_food" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
                         android:layout_weight="1"
-                        android:text="@string/opcion_platos"
-                        android:textColor="@color/text_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flecha_siguiente"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcion_platos"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/descripcion_platos"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/flecha_siguiente"
+                        android:src="@drawable/ic_chevron_right" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -121,36 +163,48 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="82dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="14dp">
+                    android:paddingHorizontal="16dp">
 
-                    <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
                         android:background="@drawable/bg_menu_icon"
-                        android:gravity="center"
-                        android:text="@string/badge_mesas"
-                        android:textColor="@color/primary"
-                        android:textStyle="bold" />
+                        android:contentDescription="@string/opcion_mesas"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_table" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
                         android:layout_weight="1"
-                        android:text="@string/opcion_mesas"
-                        android:textColor="@color/text_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flecha_siguiente"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcion_mesas"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/descripcion_mesas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/flecha_siguiente"
+                        android:src="@drawable/ic_chevron_right" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -164,36 +218,48 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="82dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="14dp">
+                    android:paddingHorizontal="16dp">
 
-                    <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
                         android:background="@drawable/bg_menu_icon"
-                        android:gravity="center"
-                        android:text="@string/badge_pedidos"
-                        android:textColor="@color/primary"
-                        android:textStyle="bold" />
+                        android:contentDescription="@string/opcion_pedidos"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_receipt" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
                         android:layout_weight="1"
-                        android:text="@string/opcion_pedidos"
-                        android:textColor="@color/text_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flecha_siguiente"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcion_pedidos"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/descripcion_pedidos"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/flecha_siguiente"
+                        android:src="@drawable/ic_chevron_right" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -207,36 +273,48 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="82dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="14dp">
+                    android:paddingHorizontal="16dp">
 
-                    <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
                         android:background="@drawable/bg_menu_icon"
-                        android:gravity="center"
-                        android:text="@string/badge_reportes"
-                        android:textColor="@color/primary"
-                        android:textStyle="bold" />
+                        android:contentDescription="@string/opcion_reportes"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_analytics" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
                         android:layout_weight="1"
-                        android:text="@string/opcion_reportes"
-                        android:textColor="@color/text_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flecha_siguiente"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opcion_reportes"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/descripcion_reportes"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/flecha_siguiente"
+                        android:src="@drawable/ic_chevron_right" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -245,8 +323,12 @@
                 style="@style/Widget.SaborApp.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/salir" />
+                android:layout_marginTop="6dp"
+                android:text="@string/salir"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -43,6 +43,7 @@ Las credenciales se validan contra la base de datos local `saborapp.db`.
 - Estado vacío cuando todavía no existen ventas cerradas en el día.
 - Cuenta y resumen de ventas compartibles mediante cualquier aplicación compatible.
 - Sesión persistente con cierre de sesión seguro.
+- Interfaz minimalista renovada con gradientes, tarjetas, iconos vectoriales y estados visuales.
 - APK release firmado compatible desde Android 7.0 (API 24).
 
 ## Requisitos

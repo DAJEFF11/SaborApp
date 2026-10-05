@@ -10,19 +10,19 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_header_gradient"
         app:navigationContentDescription="@string/volver"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:title="@string/titulo_platos"
         app:titleTextColor="@color/white" />
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.SaborApp.Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/buscar_plato"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:padding="12dp"
+            android:padding="16dp"
             android:paddingBottom="92dp" />
 
         <TextView
@@ -68,10 +68,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="20dp"
+            android:layout_margin="22dp"
             android:contentDescription="@string/agregar_plato"
             android:src="@drawable/ic_add"
             app:backgroundTint="@color/primary"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
             app:tint="@color/white" />
     </FrameLayout>
 </LinearLayout>

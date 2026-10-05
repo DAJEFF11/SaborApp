@@ -44,6 +44,9 @@ class PlatoAdapter(
             )
             val textColor = if (plato.disponible) R.color.text_secondary else R.color.accent_red
             tvDisponibilidad.setTextColor(ContextCompat.getColor(root.context, textColor))
+            tvDisponibilidad.setBackgroundResource(
+                if (plato.disponible) R.drawable.bg_badge_success else R.drawable.bg_badge_danger
+            )
             root.setOnClickListener { onPlatoClick(plato) }
         }
     }
